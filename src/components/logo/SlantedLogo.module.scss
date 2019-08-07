@@ -1,0 +1,15 @@
+@import '../../styles/base';
+
+.wrapper {
+  color: $black;
+  height: 300px;
+  position: relative;
+}
+
+.letter {
+  font-family: 'Muli', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  margin-right: 20px;
+  position: relative;
+}
