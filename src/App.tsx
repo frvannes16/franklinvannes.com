@@ -1,7 +1,11 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import BlockLogo from './components/block-logo/BlockLogo';
 import Menu from './components/menu/Menu';
 import Page from './components/page/Page';
+import Home from './components/home/Home';
+import About from './components/about/About';
+import Resume from './components/resume/Resume';
 import styles from './App.module.scss';
 
 const App: React.FC = () => {
@@ -11,13 +15,13 @@ const App: React.FC = () => {
       <div className={styles.menuWrapper}>
         <Menu />
       </div>
-      <Page title="Home">
-        <p>Welcome to franklinvannes.com</p>
-        <p>
-          This site is created using React, TypeScript, Sass, and more! It's
-          full of some dandy features, so feel free to take a look around
-        </p>
-      </Page>
+
+      <BrowserRouter >
+        <Route exact path={'/'} component={Home} />
+        <Route path={'/about'} component={About} />
+        <Route path={'/resume'} component={Resume}/>
+        <Route path={'/links'} component={Home}/>
+      </BrowserRouter>
     </div>
   );
 };
