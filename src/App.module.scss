@@ -1,9 +1,35 @@
 @import 'styles/base';
 
+body {
+  font-family: 'Cutive Mono';
+  font-size: 18px;
+  background: $background;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Muli', monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
 .page {
   width: 60%;
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
+
+  @include media('<=tablet') {
+    width: 100%;
+  }
 }
 
 .menuWrapper {

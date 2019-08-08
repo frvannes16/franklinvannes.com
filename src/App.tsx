@@ -7,11 +7,17 @@ import styles from './App.module.scss';
 const App: React.FC = () => {
   return (
     <div className={styles.page}>
-      <BlockLogo>FRANKLIN</BlockLogo>
+      <BlockLogo href="/">FRANKLIN</BlockLogo>
       <div className={styles.menuWrapper}>
         <Menu />
       </div>
-      <Page title="Home"><p>Welcome to franklinvannes.com</p></Page>
+      <Page title="Home">
+        <p>Welcome to franklinvannes.com</p>
+        <p>
+          This site is created using React, TypeScript, Sass, and more! It's
+          full of some dandy features, so feel free to take a look around
+        </p>
+      </Page>
     </div>
   );
 };

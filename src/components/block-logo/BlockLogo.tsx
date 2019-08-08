@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import styles from './BlockLogo.module.scss';
 
-const BlockLogo: React.FC = (props: React.PropsWithChildren<{}>) => {
+type Props = {
+  href: string;
+};
+
+const BlockLogo: React.FC<PropsWithChildren<Props>> = props => {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.backgroundBlock} />
-      <div className={styles.children}>
-        {props.children && props.children}
+    <a href={props.href}>
+      <div className={styles.wrapper}>
+        <div className={styles.backgroundBlock} />
+        <div className={styles.backgroundBlockWhite} />
+        <div className={styles.children}>
+          {props.children && props.children}
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 export default BlockLogo;

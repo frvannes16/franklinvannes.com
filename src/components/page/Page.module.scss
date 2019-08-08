@@ -1,0 +1,20 @@
+@import '../../styles/base';
+
+.pageWrapper {
+    padding: 20px 16px 16px;
+    margin: 20px 16px 16px;
+    background: $white;
+}
+
+.title {
+    font-family: 'Muli', sans-serif;
+    font-size: 32px;
+    font-weight: 400px;
+}
+
+.content {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: $black;
+}
